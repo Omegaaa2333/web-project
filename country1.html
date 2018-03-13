@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+<title>Squid</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<head>
+  <link rel="stylesheet" href="indexcss.css">
+</head>
+<style>
+body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
+.w3-quarter img{margin-bottom: -6px; cursor: pointer}
+.w3-quarter img:hover{opacity: 0.6; transition: 0.3s}
+#googleForm {
+  text-align: center;
+}
+.pagefooter{
+  text-align: center;
+  font-size: 16px;
+}
+</style>
+<body class="w3-light-grey">
+
+
+<header class="w3-container w3-top w3-white w3-xlarge w3-padding-16">
+  <span class="w3-left w3-padding">Squid</span>
+  <a href="index.html" class="w3-right w3-button w3-white" onclick="open()">☰</a>
+</header>
+
+<!-- Overlay effect when opening sidebar on small screens -->
+<div class="w3-overlay w3-animate-opacity" onclick="close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+
+<!-- !PAGE CONTENT! -->
+<div class="w3-main w3-content" style="max-width:1600px;margin-top:83px">
+
+  <!-- Photo grid -->
+
+  <div class="w3-row w3-grayscale-min">
+    <div class="w3-third">
+    <a href="popup.html">  <img src="https://upload.wikimedia.org/wikipedia/en/e/e7/IDGAF_cover.png" style="width:100%" onclick="onClick(this)" alt="IDGAF by Dua Lipa" link="https://www.youtube.com/embed/Mgfe5tIwOj0"></a>
+
+      <img src="https://upload.wikimedia.org/wikipedia/en/thumb/7/7b/Never_Be_the_Same_%28Official_Single_Cover%29_by_Camila_Cabello.png/220px-Never_Be_the_Same_%28Official_Single_Cover%29_by_Camila_Cabello.png" style="width:100%" onclick="onClick(this)" alt="Camila_Cabello">
+      <img src="https://upload.wikimedia.org/wikipedia/en/thumb/9/9d/Marshmello_and_Anne-Marie_Friends.jpg/220px-Marshmello_and_Anne-Marie_Friends.jpg" style="width:100%" onclick="onClick(this)" alt="friends">
+   </div>
+
+   <div class="w3-third">
+      <img src="https://ilyricsbuzz.com/wp-content/uploads/2018/03/Ill-Maybe-We-Are.jpg" style="width:100%" onclick="onClick(this)" alt="A girl, and a train passing">
+      <img src="https://upload.wikimedia.org/wikipedia/en/thumb/9/98/Rudimental_These_Days_cover.jpg/220px-Rudimental_These_Days_cover.jpg" style="width:100%" onclick="onClick(this)" alt="Waiting for the bus in the desert">
+      <img src="https://upload.wikimedia.org/wikipedia/en/thumb/8/80/Ed_Sheeran_Perfect_Single_cover.jpg/220px-Ed_Sheeran_Perfect_Single_cover.jpg" style="width:100%" onclick="onClick(this)" alt="Nature again.. At its finest!">
+    </div>
+
+    <div class="w3-third">
+      <img src="https://ilyricsbuzz.com/wp-content/uploads/2018/02/Keyakizaka-46-Garasu-o-ware-1.jpg" style="width:100%" onclick="onClick(this)" alt="Waiting for the bus in the desert">
+      <img src="https://gss0.bdstatic.com/-4o3dSag_xI4khGkpoWK1HF6hhy/baike/w%3D268%3Bg%3D0/sign=50c1b30370cb0a4685228c3f53589119/b812c8fcc3cec3fda031f68cdd88d43f8794273f.jpg" style="width:100%" onclick="onClick(this)" alt="What a beautiful scenery this sunset">
+      <img src="https://gss1.bdstatic.com/-vo3dSag_xI4khGkpoWK1HF6hhy/baike/w%3D268%3Bg%3D0/sign=7ef364d4f3dcd100cd9cff274ab0202d/6a600c338744ebf85f78aae6d2f9d72a6159a7da.jpg" style="width:100%" onclick="onClick(this)" alt="The Beach. Me. Alone. Beautiful">
+    </div>
+
+    <!-- <div class="w3-quarter">
+      <img src="https://upload.wikimedia.org/wikipedia/en/thumb/9/98/Rudimental_These_Days_cover.jpg/220px-Rudimental_These_Days_cover.jpg" style="width:100%" onclick="onClick(this)" alt="A boy surrounded by beautiful nature">
+      <img src="/w3images/girl_train.jpg" style="width:100%" onclick="onClick(this)" alt="A girl, and a train passing">
+      <img src="/w3images/boy.jpg" style="width:100%" onclick="onClick(this)" alt="Quiet day at the beach. Cold, but beautiful">
+    </div> -->
+  </div>
+
+  <!-- Pagination -->
+  <div class="w3-center w3-padding-32">
+    <div class="w3-bar">
+      <a href="#" class="w3-bar-item w3-button w3-hover-black">«</a>
+      <a href="#" class="w3-bar-item w3-black w3-button">1</a>
+      <a href="#" class="w3-bar-item w3-button w3-hover-black">2</a>
+      <a href="#" class="w3-bar-item w3-button w3-hover-black">3</a>
+      <a href="#" class="w3-bar-item w3-button w3-hover-black">4</a>
+      <a href="#" class="w3-bar-item w3-button w3-hover-black">»</a>
+    </div>
+  </div>
+
+  <!-- Modal for full size images on click-->
+  <div id="modal01" class="w3-modal w3-black" style="padding-top:0" onclick="this.style.display='none'">
+    <span class="w3-button w3-black w3-xlarge w3-display-topright">×</span>
+    <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64">
+      <img id="img01" class="w3-image">
+      <p id="caption"></p>
+      <!-- <iframe width="640" height="360" id="link" src=musicLink.innerHTML frameborder="0" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen=""></iframe> -->
+    </div>
+  </div>
+  <div id="googleForm">
+    <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfaMFp-dfjJQWyC9WIJ9Gza-vvp-CbVbOipJ2QaVsit4Eu2JQ/viewform?embedded=true" width="760" height="500" frameborder="0" marginheight="0" marginwidth="0">Loading...</iframe>
+  </div>
+  <!-- Contact section -->
+  <!-- <div class="w3-container w3-light-grey w3-padding-32 w3-padding-large" id="contact">
+    <div class="w3-content" style="max-width:600px">
+      <h4 class="w3-center"><b>Contact Me</b></h4>
+      <p>Do you want to contribute to the page and share your favourite music from around the world? Feel free to fill out the form and send me a message :)</p>
+      <form action="/action_page.php" target="_blank">
+        <div class="w3-section">
+          <label>Name</label>
+          <input class="w3-input w3-border" type="text" name="Name" required>
+        </div>
+        <div class="w3-section">
+          <label>Email</label>
+          <input class="w3-input w3-border" type="text" name="Email" required>
+        </div>
+        <div class="w3-section">
+          <label>Name of the piece of music you'd like to share</label>
+          <input class="w3-input w3-border" type="text" name="NameofMusic" required>
+        </div>
+        <div class="w3-section">
+          <label>Description of the music (country, genre etc)</label>
+          <input class="w3-input w3-border" type="text" name="description" required>
+        </div>
+        <div class="w3-section">
+          <label>Link to the music</label>
+          <input class="w3-input w3-border" type="text" name="Link" required>
+        </div>
+        <div class="w3-section">
+          <label>Any additional comments you'd like to share</label>
+          <input class="w3-input w3-border" type="text" name="Message" required>
+        </div>
+        <button type="submit" class="w3-button w3-block w3-black w3-margin-bottom">Send Message</button>
+      </form>
+    </div> -->
+  <!-- </div> -->
+
+  <!-- Footer -->
+  <footer class="w3-container w3-padding-32 w3-grey pagefooter">
+    <p class="copyright text-muted">Squid 2018 &copy;</p>
+    <p>Created by Siqi and Sinead with    <a href="https://www.codefirstgirls.org.uk/" data-toggle="tooltip" title="Visit codefirst:girls website">codefirst:girls</a></p>
+  </footer>
+
+  <!-- <div class="w3-black w3-center w3-padding-24">Powered by <a href="https://www.w3schools.com/w3css/default.asp" title="W3.CSS" target="_blank" class="w3-hover-opacity">w3.css</a></div> -->
+
+<!-- End page content -->
+</div>
+
+<script>
+// Script to open and close sidebar
+// function open() {
+//     document.getElementById("mySidebar").style.display = "block";
+//     document.getElementById("myOverlay").style.display = "block";
+// }
+//
+// function close() {
+//     document.getElementById("mySidebar").style.display = "none";
+//     document.getElementById("myOverlay").style.display = "none";
+// }
+
+// Modal Image Gallery
+function onClick(element) {
+  document.getElementById("img01").src = element.src;
+  document.getElementById("modal01").style.display = "block";
+  document.getElementById("link").src = element.link;
+  var captionText = document.getElementById("caption");
+  captionText.innerHTML = element.alt;
+  var musicLink = document.getElementById("link");
+  musicLink.innerHTML = element.link;
+}
+
+</script>
+
+
+</body>
+</html>
