@@ -59,9 +59,8 @@ h1 {
   padding-top: 10px;
 }
 .carousel-caption{
-  margin:auto;
-  height: auto;
-}
+  color: #006A71;
+ }
 .carousel-inner img{
   width:100%;
   height: auto;
