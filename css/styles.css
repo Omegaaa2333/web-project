@@ -144,14 +144,27 @@ h4{
   column-rule-width: 1px;
   column-rule-color: lightblue;
 }
-.quote1{
-  column-span: none;
-}
+
 footer{
   background-color: black;
   opacity: 0.8;
   color: white;
   padding: 5px;
+}
+.wide{
+  width: 100%;
+}
+.btn-facebook {
+ background: #4868ac;
+ border-color: #314776;
+}
+.btn-camfm {
+ background: orange;
+ border-color: #314776;
+}
+#social-buttons{
+  float:right;
+  padding-bottom: 50px;
 }
 .up-arrow {
   color: white;
