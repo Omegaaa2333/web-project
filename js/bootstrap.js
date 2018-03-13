@@ -9,14 +9,6 @@ $(window).scroll(function() {
   });
 });
 
-.bg-light_blue{
-  background-color: #006A71;
-  opacity: 0.5;
-}
-
-.bg-light_grey{
-  background-color:#d3d3d3;
-}
-.bg-grey{
-  background-color: grey;
-}
+  $(document).ready(function(){
+    $('[data-toggle="tooltip"]').tooltip();
+    })

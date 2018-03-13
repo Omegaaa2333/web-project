@@ -1,5 +1,10 @@
+body{
+  padding: 0;
+  margin: 0;
+  min-width: 1000px;
+  min-height: 1000px;
+}
 .navbar{
-    font-family: Roboto, sans-serif;
     margin-bottom: 0;
     background-color: #006A71;
     font-size: 11px;
@@ -10,7 +15,7 @@
     color: #d5d5d5 !important;
 }
 .navbar-nav li a:hover {
-      color: #fff !important;
+    color: #fff !important;
 }
 .form-inline{
   text-align: right;
@@ -23,7 +28,7 @@ h1 {
 }
 .tagline{
   text-align: right;
-  font-size: 15px;
+  font-size: 20px;
 }
 .container{
   padding-bottom: 10px;
@@ -144,14 +149,27 @@ h4{
   column-rule-width: 1px;
   column-rule-color: lightblue;
 }
-.quote1{
-  column-span: none;
-}
+
 footer{
   background-color: black;
   opacity: 0.8;
   color: white;
   padding: 5px;
+}
+.wide{
+  width: 100%;
+}
+.btn-facebook {
+ background: #4868ac;
+ border-color: #314776;
+}
+.btn-camfm {
+ background: orange;
+ border-color: #314776;
+}
+#social-buttons{
+  float:right;
+  padding-bottom: 50px;
 }
 .up-arrow {
   color: white;
